@@ -18,7 +18,7 @@ def hello():
     download = st.download()/bytesInMb
     servernames =[]
     st.get_servers(servernames)
-    return render_template("index.html", uploadSpeed=upload, downloadSpeed=download, ping=st.results.ping)
+    return render_template("index.html", downloadSpeed=download, uploadSpeed=upload, ping=st.results.ping)
 
 # There are negative implications when running this in a docker container.  The next step will be to determine the best way to run this
 # import os
